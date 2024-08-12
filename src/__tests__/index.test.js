@@ -36,7 +36,7 @@ test('renders the Directors component on route "/directors"', () => {
 test('renders the Movie component on route "/movie/:id"', async () => {
     const id = 1
     const router = createMemoryRouter(routes, {
-        initialEntries: [`/movie/${id}`]
+        initialEntries: [`/movie/:id`]
     })
   render(
     <RouterProvider router={router}/>

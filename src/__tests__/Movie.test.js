@@ -19,7 +19,7 @@ test("renders without any errors", () => {
   errorSpy.mockRestore();
 });
 
-test("renders movie's title in an h1", async () => {
+test("renders movie's title in an H1", async () => {
   render(<RouterProvider router={router} />);
   const h1 = await screen.findByText(/Doctor Strange/);
   expect(h1).toBeInTheDocument();
@@ -39,7 +39,7 @@ test("renders a span for each genre",  () => {
   genres.forEach(async (genre) =>{
     const span = await screen.findByText(genre);
     expect(span).toBeInTheDocument();
-    expect(span.tagName).toBe("SPAN");
+    expect(span.tagName).toBe("span");
   })
 });
 
